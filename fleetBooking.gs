@@ -8,25 +8,13 @@ function getValues(){
   //NOTE: Jika ingin setValues(), format array-subarray harus sesuai dengan getRange() yg ingin di getValue()
 }
 
-// MODULE 1B - HOW setValues() WORK!
-  let range = sheet.getRange('A1:B2');
-  let newValue = [['a','b'],['c','d']]
-
-//MODULE 2 - SET VALUE AS 1D ARRAY KE SAMPING
-function test2(){
-  let array = [['a', 'b']]; //1 row, makanya 1 subarray
-  sheet.getRange('A1:B1').setValues(array);
-}
-
-//MODULE 2b - FLATTEN VALUES TO REMOVE SUBARRAY
-function test2b(){
-  let array1 = [['a', 'b']]; //1 row, makanya 1 subarray
+//MODULE 2 - IF YOU USE .flat(), REMOVE ALL level 2 [square bracket] (a level below outermost)
+function (){
   let array2 = [['a'], ['b']]; //2 row, makanya perlu 2 subarray
-  let flatValues1 = array1.flat(); // Converts array1 into a 1D array
-  let flatValues2 = array2.flat(); // Converts array2 into a 1D array
-
-  Logger.log(flatValues1); // OUTPUT - [a,b]
-  Logger.log(flatValues2); // OUTPUT - [a,b]
+  array2.flat() = ['a','b']
+  let array3 = [ [1,2] ,[ 3,[4,5] ]]
+  array3.flat() = [1,2,3,[4,5]]
+  Logger.log(dCell.flat())
 }
 
 //MODULE 3 - BASIC GET VALUES
