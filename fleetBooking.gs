@@ -1,8 +1,16 @@
-//MODULE 1 - SET VALUE AS 1D ARRAY KE BAWAH
-function test(){
-  let array = [['a'], ['b']]; //2 row, makanya perlu 2 subarray
-  sheet.getRange('A1:A2').setValues(array);
+sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+// MODULE 1 - HOW getValues() WORK! | asumsi A1 = 'a' | A2 = 'b' | B1 = 'c' | B2 = 'd'
+function getValues(){
+  let range1 = sheet.getRange('A1:B2').getValues(); // OUTPUT: [['a','c'],['b','d']]
+  let range2 = sheet.getRange('A1:A2').getValues(); // OUTPUT: [['a'],['b']]
+  let range3 = sheet.getRange('A1').getValues(); //OUTPUT: [['a]]
+  //NOTE: Jika ingin setValues(), format array-subarray harus sesuai dengan getRange() yg ingin di getValue()
 }
+
+// MODULE 1B - HOW setValues() WORK!
+  let range = sheet.getRange('A1:B2');
+  let newValue = [['a','b'],['c','d']]
 
 //MODULE 2 - SET VALUE AS 1D ARRAY KE SAMPING
 function test2(){
